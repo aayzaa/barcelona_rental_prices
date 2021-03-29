@@ -1,6 +1,18 @@
-# TODO: Description
+""" Handles the creation of the model.
+
+The chosen model is Ridge Regression after some testing done in
+    a Jupyter Notebook. The models tested were all Linear models
+    or Support Vector Machines models, with different polynomial
+    degrees.
+    Ridge Regression was the one that performed the best without
+    overfitting the data.
+
+(CC) 2021 Alex Ayza, Barcelona, Spain
+alexayzaleon@gmail.com
+"""
 
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
@@ -11,7 +23,7 @@ from joblib import dump
 # Get data
 df = pd.read_csv('data/processed/barcelona_apartments2.csv')
 
-# Create a onehot encoder category for the districts in order to do stratified train test split
+# Create a one-hot encoder category for the districts in order to do stratified train test split
 df['district_cat'] = df['eixample'].astype(str) + df['ciutat_vella'].astype(str) \
                      + df['horta_guinardo'].astype(str) + df['gracia'].astype(str) \
                      + df['les_corts'].astype(str) + df['nou_barris'].astype(str) \
@@ -44,9 +56,9 @@ ridge_model = Ridge(alpha=14, solver='cholesky')
 ridge_model.fit(X_train_poly, y_train)
 dump(ridge_model, 'data/models/ridge_model.joblib')
 
-# Check prediction stats
+# Check prediction stats and save them
 predictions = ridge_model.predict(X_test_poly)
-rmse = mean_squared_error(predictions, y_test, squared=False)
-mae = mean_absolute_error(predictions, y_test)
-
-print(rmse, mae)
+rmse = mean_squared_error(predictions, y_test, squared=False)   # root mean square error
+mae = mean_absolute_error(predictions, y_test)                  # mean absolute error
+stats = np.array([rmse,mae])
+dump(stats, 'data/models/ridge_model_stats.joblib')
