@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run C:/Users/Alex/PycharmProjects/barcelona-apartments-2/src/webapp/WebApp.py
