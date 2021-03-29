@@ -22,14 +22,14 @@ def get_user_input():
     rooms = st.sidebar.slider('Rooms:', 1, 11, 2)
     bathrooms = st.sidebar.slider('Bathrooms:', 1, 8, 1)
     sizem2 = st.sidebar.number_input('Size in m2:', 11, 1100, 75)
-    district = st.sidebar.radio('District:', ['eixample','ciutat_vella','horta_guinardo',
-                                                 'gracia','les_corts','nou_barris','sant_andreu',
-                                                 'sant_marti','sants_montjuic','sarria_sant_gervasi'])
+    district = st.sidebar.radio('District:', ['Eixample','Ciutat Vella','Horta-Guinardo',
+                                                 'Gracia','Les Corts','Nou Barris','Sant Andreu',
+                                                 'Sant Marti','Sants Montjuic','Sarria - Sant Gervasi'])
 
     # Store data into dict
-    user_data = {'rooms': rooms, 'bathrooms': bathrooms, 'sizem2': sizem2, 'eixample': 0, 'ciutat_vella': 0,
-                 'horta_guinardo': 0, 'gracia': 0, 'les_corts': 0, 'nou_barris': 0, 'sant_andreu': 0, 'sant_marti': 0,
-                 'sants_montjuic': 0, 'sarria_sant_gervasi': 0, district: 1}
+    user_data = {'rooms': rooms, 'bathrooms': bathrooms, 'sizem2': sizem2, 'Eixample': 0, 'Ciutat Vella': 0,
+                 'Horta-Guinardo': 0, 'Gracia': 0, 'Les Corts': 0, 'Nou Barris': 0, 'Sant Andreu': 0, 'Sant Marti': 0,
+                 'Sants Montjuic': 0, 'Sarria - Sant Gervasi': 0, district: 1}
 
     # Transform the data into a dataframe
     features = pd.DataFrame(user_data, index=[0])
@@ -56,5 +56,6 @@ st.write('# ' + "{:.0f}".format(prediction[0]) + " €")
 st.subheader('')
 st.write('Mean absolute error: ' + str(328) + '€')
 st.write('Model : 2-degree Ridge Regression with a Cholesky solver and an α value of 14.')
+st.write('Data from December 2020.')
 st.write('Created by [aayzaa](https://github.com/aayzaa).')
 
