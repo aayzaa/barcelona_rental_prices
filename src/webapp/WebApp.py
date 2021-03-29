@@ -11,7 +11,7 @@ from sklearn.preprocessing import PolynomialFeatures
 st.title('Barcelona Apartments Rental Price Predictor')
 
 # Open and display an image
-image = Image.open('../../data/images/barcelona_long.png')
+image = Image.open('data/images/barcelona_long.png')
 st.image(image, use_column_width=True)
 
 # Sub-title
@@ -45,7 +45,7 @@ def get_user_input():
 user_input = get_user_input()
 
 # Store the models predictions in a variable
-model = load('../../data/models/ridge_model.joblib')
+model = load('data/models/ridge_model.joblib')
 prediction = model.predict(user_input)
 
 # Display prediction

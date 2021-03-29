@@ -9,7 +9,7 @@ from sklearn.linear_model import Ridge
 from joblib import dump
 
 # Get data
-df = pd.read_csv('../../data/processed/barcelona_apartments2.csv')
+df = pd.read_csv('data/processed/barcelona_apartments2.csv')
 
 # Create a onehot encoder category for the districts in order to do stratified train test split
 df['district_cat'] = df['eixample'].astype(str) + df['ciutat_vella'].astype(str) \
@@ -42,7 +42,7 @@ ridge_model = Ridge(alpha=14, solver='cholesky')
 
 # Train the model and save it
 ridge_model.fit(X_train_poly, y_train)
-dump(ridge_model, '../../data/models/ridge_model.joblib')
+dump(ridge_model, 'data/models/ridge_model.joblib')
 
 # Check prediction stats
 predictions = ridge_model.predict(X_test_poly)
