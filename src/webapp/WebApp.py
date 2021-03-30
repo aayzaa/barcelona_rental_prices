@@ -24,7 +24,7 @@ image = Image.open('data/images/barcelona_long.png')
 st.image(image, use_column_width=True)
 
 # Sub-title
-st.write('Predict the a Barcelona rental price by entering an apartment information on the sidebar.')
+st.write('Predict the rental price by entering the apartment information on the sidebar.')
 
 # Used to transform the user input into an apartment instance
 def get_user_input():
