@@ -6,7 +6,7 @@ _A web-based predictor of rental prices of apartments in Barcelona using machine
 
 ## Try it! 💻
 
-**Available on the following website: [barcelona-apartments-2.herokuapp.com](http://barcelona-apartments-2.herokuapp.com/).**
+**Available on the following website: [barcelona-apartments-2.herokuapp.com](http://barcelona-rental-prices.herokuapp.com/).**
 
 Select the properties of an apartment by using the sidebar widgets: number of rooms and bathrooms, the size in squared meters and the district where it is located.
 After that, the model will show the rental price prediction according to the apartment you inputted.
@@ -15,7 +15,7 @@ _Note: take the results with a handful of salt: this is a personal project and i
 
 ## Process 👩🏽‍💻
 
-I had come up with this idea in an [earlier project](https://github.com/aayzaa/barcelona_rental_prices_predictor), after having looked for a new apartment in Barcelona for quite a while. I was also learning my first machine learning algorithm (Hello Linear Regression!) so I decided that it could be a great opportunity to try it!
+I had come up with this idea in an [earlier project](https://github.com/aayzaa/barcelona_rental_prices_no_sklearn), after having looked for a new apartment in Barcelona for quite a while. I was also learning my first machine learning algorithm (Hello Linear Regression!) so I decided that it could be a great opportunity to try it!
 
 The prior project used a basic Linear Regression model that I implemented without sklearn library and it had some minor issues with data inconsistencies and the lack of a GUI.
 
