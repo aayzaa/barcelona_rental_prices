@@ -1,4 +1,4 @@
-# 📈 Barcelona Rental Price Predictor 📉
+# 📈 [Barcelona Rental Price Predictor](http://barcelona-apartments-2.herokuapp.com/) 📉
 
 _A web-based predictor of rental prices of apartments in Barcelona using machine learning._
 
