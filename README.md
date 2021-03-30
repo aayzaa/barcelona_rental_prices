@@ -4,7 +4,7 @@ _A web-based predictor of rental prices of apartments in Barcelona using machine
 
 ## Try it! 💻
 
-** The predictor is available on the following website: [barcelona-apartments-2.herokuapp.com](http://barcelona-apartments-2.herokuapp.com/). **
+**The predictor is available on the following website: [barcelona-apartments-2.herokuapp.com](http://barcelona-apartments-2.herokuapp.com/).**
 
 Select the properties of an apartment by using the sidebar widgets: number of rooms and bathrooms, the size in squared meters and the district where it is located.
 After that, the model will show the rental price prediction according to the apartment you inputted.
