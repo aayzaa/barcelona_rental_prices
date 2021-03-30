@@ -2,6 +2,8 @@
 
 _A web-based predictor of rental prices of apartments in Barcelona using machine learning._
 
+![Image of the web app](https://github.com/aayzaa/barcelona-apartments-2/blob/master/data/images/brpp.png?raw=true)
+
 ## Try it! 💻
 
 **The predictor is available on the following website: [barcelona-apartments-2.herokuapp.com](http://barcelona-apartments-2.herokuapp.com/).**
@@ -9,7 +11,7 @@ _A web-based predictor of rental prices of apartments in Barcelona using machine
 Select the properties of an apartment by using the sidebar widgets: number of rooms and bathrooms, the size in squared meters and the district where it is located.
 After that, the model will show the rental price prediction according to the apartment you inputted.
 
-_Note: take the results with a handful of salt: this is a personal project and it doesn't take into account the state of an apartment, the views, if it's furnished, if the neighbors are noisy or other types of variables that end up defining a price.
+_Note: take the results with a handful of salt: this is a personal project and it doesn't take into account the state of an apartment, the views, if it's furnished, if the neighbors are noisy or other types of variables that end up defining a price._
 
 ## Process 👩🏽‍💻
 
